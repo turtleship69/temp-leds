@@ -2,8 +2,11 @@ from Arduino import Arduino
 import wmi
 import time
 
+from config import BAUD, PORT
+
 # Set up Arduino board
-board = Arduino("9600", port="COM6")
+
+board = Arduino(BAUD, port=PORT)
 pins = [3, 4, 5, 6, 7, 8]
 
 for pin in pins:
